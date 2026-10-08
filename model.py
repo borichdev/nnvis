@@ -17,7 +17,7 @@ class XORModel(nn.Module):
 
 
 
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
+    def forward(self, x: torch.Tensor) -> Dict[str, torch.Tensor]:
         z1 = self.layer_hidden(x)
         a1 = self.act_hidden(z1)
         z2 = self.layer_output(a1)
